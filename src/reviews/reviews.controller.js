@@ -30,7 +30,7 @@ async function update(req, res, next) {
 async function destroy(req, res) {
   const { review } = res.locals;
   await reviewsService.delete(review.review_id);
-  res.sendStatus(204);
+  res.sendStatus(404);
 }
 
 // VALIDATION

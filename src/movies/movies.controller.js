@@ -34,7 +34,7 @@ async function readMovieAndReviews(req, res) {
   res.json({ data });
 }
 
-// VALIDATE
+// VALIDATION
 async function movieExists(req, res, next) {
   const { movieId } = req.params;
   const validMovie = await moviesService.read(movieId);
