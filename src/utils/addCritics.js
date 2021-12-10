@@ -1,3 +1,5 @@
+// adds a nested object
+
 function addCritics(reviews) {
   return reviews.map((review) => {
     return {

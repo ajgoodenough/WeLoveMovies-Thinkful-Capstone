@@ -1,5 +1,6 @@
 const lodash = require("lodash");
 const mapProperties = require("./map-properties");
+// CREATES A NESTED ARRAY
 
 /**
  * Generates a custom map-properties configuration for the current row in the data set.

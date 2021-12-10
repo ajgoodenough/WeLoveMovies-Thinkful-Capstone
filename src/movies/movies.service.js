@@ -6,14 +6,14 @@ const reduceReviewsAndMovie = reduceProperties("movie_id", {
   review_id: ["reviews", null, "review_id"],
   content: ["reviews", null, "content"],
   score: ["reviews", null, "score"],
-  critic_id: ["reviews", null, "critic_id"],
+  critic_id: ["reviews", null, "critic_id"]
 });
 
 function list() {
   return knex("movies as m")
     .select("*")
     .join("reviews as r", "m.movie_id", "r.movie_id")
-    .then(reduceReviewsAndMovie);
+    .then(reduceReviewsAndMovie)
 }
 
 function listMoviesCurrentlyShowing() {

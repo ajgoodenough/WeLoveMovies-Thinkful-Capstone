@@ -16,11 +16,6 @@ An example record looks like the following:
   "content": "...",
   "score": 4,
   "movie_id": 1,
-  "critic_id": 4,
-  "created_at": "2021-02-23T20:48:13.315Z",
-  "updated_at": "2021-02-23T20:48:13.315Z"
+  "critic_id": 4
 }
 ```
-
-To create the `created_at` and `updated_at` fields you can use the timestamps method in your migration file (e.g. `table.timestamps(true, true);`). You can read more about timestamps [here](https://knexjs.org/#Schema-timestamps).
-`

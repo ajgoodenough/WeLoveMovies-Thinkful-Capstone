@@ -3,14 +3,13 @@ const path = require("path");
 require("dotenv").config();
 
 const {
-  DATABASE_URL = "postgresql://postgres@localhost/postgres",
+  DATABASE_URL = "postgres://dzgmxkiu:5nFLho84yR0E-wUGpmie9ws9snVCHglX@fanny.db.elephantsql.com/dzgmxkiu",
 } = process.env;
 
 module.exports = {
   development: {
     client: "postgresql",
     connection: DATABASE_URL,
-    pool: { min: 0, max: 5 },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },
@@ -22,7 +21,6 @@ module.exports = {
   production: {
     client: "postgresql",
     connection: DATABASE_URL,
-    pool: { min: 0, max: 5 },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
     },

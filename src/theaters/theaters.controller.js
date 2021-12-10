@@ -1,7 +1,7 @@
 const theatersService = require("./theaters.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
-// LIST FUNCTION
+// LIST
 async function list(req, res) {
   const data = await theatersService.list();
   res.json({ data });

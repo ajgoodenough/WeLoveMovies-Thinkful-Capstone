@@ -4,15 +4,13 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(express.json());
+// fix for req.body not being defined
+app.use(express.urlencoded({
+  extended: true
+}));
 
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-
-const errorHandler = require("./errors/errorHandler");
-const notFound = require("./errors/notFound");
+const errorHandler = require('./errors/errorHandler');
+const notFound = require('./errors/notFound');
 
 const moviesRouter = require("./movies/movies.router");
 const theatersRouter = require("./theaters/theaters.router");
