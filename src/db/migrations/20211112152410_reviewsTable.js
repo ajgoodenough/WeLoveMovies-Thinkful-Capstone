@@ -14,8 +14,7 @@ exports.up = function (knex) {
       .foreign("critic_id")
       .references("critic_id")
       .inTable("critics")
-      .onDelete("cascade")
-      table.timestamps(true, true);
+      .onDelete("cascade");
   });
 };
 
