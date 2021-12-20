@@ -25,7 +25,7 @@ async function update(req, res, next) {
   let data = await reviewsService.update(updatedReview);
   // put response in correct format
   data = await reviewsService.readReviewCritic(review.review_id);
-  res.json({ data: data[0] });
+  res.json({ data });
 }
 
 // DELETE
